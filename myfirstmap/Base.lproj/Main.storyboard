@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myfirstmap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-Df-2e8">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Tammy's Map" id="TMQ-3r-0da"/>
+                                </items>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="im2-QY-Agr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="541"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jhl-Df-2e8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="564-cZ-BsN"/>
+                            <constraint firstItem="jhl-Df-2e8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="H4r-Y0-leQ"/>
+                            <constraint firstAttribute="trailing" secondItem="jhl-Df-2e8" secondAttribute="trailing" id="H79-lj-jDi"/>
+                            <constraint firstItem="im2-QY-Agr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="Vf3-b1-JUb"/>
+                            <constraint firstItem="im2-QY-Agr" firstAttribute="top" secondItem="jhl-Df-2e8" secondAttribute="bottom" id="YJy-SJ-0Ru"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="im2-QY-Agr" secondAttribute="bottom" constant="130" id="rym-Ab-vEU"/>
+                            <constraint firstItem="im2-QY-Agr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="xUW-TF-ds5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapview" destination="im2-QY-Agr" id="hb6-hg-h0B"/>
+                        <outlet property="navbar" destination="TMQ-3r-0da" id="Gtl-Lv-05R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+</document>
